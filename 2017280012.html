@@ -1,0 +1,68 @@
+<!DOCTYPE html> 
+<html> 
+        <title>SEFA BERK BIYIKCI 2017280012 </title>
+<body> 
+    <p style = "font-family:courier,arial,helvetica;">
+SEFA BERK BIYIKCI 2017280012
+</p>
+
+<h2>2019 Güz Döneminin ilk ödevi</h2> 
+
+<label for="id1">Metin kutusu 1</label> 
+<input  type='text'  pattern="\d" id='id1' />  
+<br> 
+
+<label for="id2">Metin kutusu 2</label> 
+<input  type='text' pattern="\d"  id='id2' />  
+<br><br> 
+
+<button  type="button" id="topla" onclick="sadeRakam(id1,id2);">Topla</button> 
+<br><br> 
+
+
+<label for="id3">Metin kutusu 3</label> 
+<input type='text' id='id3' />  
+<br> 
+<label for="id4">Metin kutusu 4</label> 
+<input type='text' id='id4' />  
+<br><br> 
+<button type="button" id="yapistir">Yapıştır</button> 
+
+
+<script>
+
+var  mt3=document.getElementById("id3");
+var mt4=document.getElementById("id4");
+var topix2=document.getElementById("yapistir");
+var  mt1=document.getElementById("id1");
+var mt2=document.getElementById("id2");
+var topix=document.getElementById("topla");
+
+function sadeRakam(id1,id2){
+    var num = /^[0-9]+$/;
+    if((id1.value.match(num))&&(id2.value.match(num)))
+    {
+
+        topix.onclick= function()
+{
+    var x = Number(mt1.value) + Number(mt2.value);
+    alert(x);
+}
+    }
+    else
+    {
+        alert("Lütfen Sayı Giriniz");
+    }
+}
+
+
+
+topix2.onclick= function()
+{
+    var y = mt3.value+mt4.value;
+    alert(y);
+}
+
+</script>
+
+</body> </html> 
